@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Dashboard</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+
+
+        
+    </head>
+
+    <style>
+        #success_message{ display: none;}
+
+        
+    </style>
+
+
+
+    <body ng-app="myApp" ng-controller="loginCtrl_">
+
+    <div  class="container">
+
+      <form name="myForm" class="well form-horizontal" ng-submit="submit()"  id="contact_form">
+        <fieldset>
+
+        <!-- Form Name -->
+        <legend><h2><b>Edit User</b></h2></legend><br>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">First Name</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input ng-model="form.first_name" name="first_name" placeholder="First Name" class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" >Last Name</label> 
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input ng-model="form.last_name" name="last_name" placeholder="Last Name" class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
+
+          <div class="form-group"> 
+          <label class="col-md-4 control-label">Department / Office</label>
+            <div class="col-md-4 selectContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+            <select ng-model="form.department" name="department" class="form-control selectpicker">
+              <option value="">Select your Department/Office</option>
+              <option>Department of Engineering</option>
+              <option>Department of Agriculture</option>
+              <option >Accounting Office</option>
+              <option >Tresurer's Office</option>
+              <option >MPDC</option>
+              <option >MCTC</option>
+              <option >MCR</option>
+              <option >Mayor's Office</option>
+              <option >Tourism Office</option>
+            </select>
+          </div>
+        </div>
+        </div>
+          
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label">Username</label>  
+          <div class="col-md-4 inputGroupContainer">
+          <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input  ng-model="form.user_name" name="user_name" placeholder="Username" class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" >Password</label> 
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input ng-model="form.user_password" name="user_password" placeholder="Password" class="form-control"  type="password" required>
+          </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+
+        <div class="form-group">
+          <label class="col-md-4 control-label" >Confirm Password</label> 
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+          <input ng-model="form.confirm_password" name="confirm_password" placeholder="Confirm Password" class="form-control"  type="password" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Text input-->
+         <div class="form-group">
+          <label class="col-md-4 control-label">E-Mail</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                <input ng-model="form.email" name="email" placeholder="E-Mail Address" class="form-control"  type="text" required>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Text input-->
+               
+        <div class="form-group">
+          <label class="col-md-4 control-label">Contact No.</label>  
+            <div class="col-md-4 inputGroupContainer">
+            <div class="input-group">
+                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+          <input ng-model="form.contact_no" name="contact_no" placeholder="(639)" class="form-control" type="text" required>
+            </div>
+          </div>
+        </div>
+
+        <!-- Select Basic -->
+
+        <!-- Success message -->
+        <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Success!.</div>
+
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label"></label>
+          <div class="col-md-4"><br>
+            &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button  type="submit" class="btn btn-warning" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSUBMIT <span class="glyphicon glyphicon-send"></span>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
+          </div>
+        </div>
+
+        </fieldset>
+        </form>
+        </div>
+    </div><!-- /.container -->
+
+ </body>
+</html>

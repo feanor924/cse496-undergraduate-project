@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Dashboard</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+    </head>
+
+    <style>
+
+
+        #txtt{
+          margin-left: 90px;
+        }
+        #txtt1{
+          margin-left: 120px;
+        }
+        .image1{
+          margin-left: 130px;
+        }
+        .image{
+          margin-left: 50px;
+        }
+
+
+
+     
+    </style>
+
+
+    <body ng-app="myApp" ng-controller="loginCtrl_">
+
+     
+
+        <div  class="wrapper">
+
+          
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <h3>Mekan Yönetim Sistemi</h3>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <h4 id ="txtt"> Caner Bakar</h4>
+                    <img src="2.png" alt="png" class ="image1"  style="width:5%">
+                    <h6 id ="txtt1"> Online </h6>
+                    <div class="container">
+                      <img src="1.png" alt="Avatar" class="image" >
+                    </div>
+                    <li class="active">
+                        <a href="#homeSubmenu" target="_self" data-toggle="collapse" aria-expanded="false">Devices</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li><a href="#!contentDevice">Contents of Device</a></li>
+                            <li><a href="#!statusDevice">Status of Device</a></li>
+                        </ul>
+                    </li>
+                    <li class="active">
+                        <a href="#setting" target="_self" data-toggle="collapse" aria-expanded="false">Settings</a>
+                        <ul class="collapse list-unstyled" id="setting">
+                            <li><a href="#!userprofile">User Profile</a></li>
+                            <li><a href="#!settings">Edit User</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#!about">Contact</a>
+                        <a id="signout" href="#" >Sign Out</a>
+
+                    </li>
+                </ul>
+            </nav>
+            
+
+            <div ng-view>
+
+
+          
+            </div>
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+            
+                
+            </div>
+        </div>
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+
+            $('#signout').click(function(){ 
+                window.localStorage.clear();
+                window.location = "../login.html";
+            });
+
+             $(document).ready(function () {
+                 $('#sidebarCollapse').on('click', function () {
+                     $('#sidebar').toggleClass('active');
+                 });
+             });
+         </script>
+    </body>
+</html>

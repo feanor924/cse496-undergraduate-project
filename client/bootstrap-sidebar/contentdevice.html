@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Remove Device</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+    
+    </head>
+
+    <style type="text/css">
+        
+        body{
+            background-color: #eaeaea;
+        }
+
+        .panel.panel-success{
+          margin-left: 0px;
+          margin-top: 40px;
+          width:  500px;
+          height: 200px;
+          background-color: #66B266;
+        }
+
+
+    </style>
+
+
+
+    <body ng-app="myApp" ng-controller="loginCtrl_">
+        <br><br>
+       
+
+           <div class="container">
+            <div class="row">
+            <div class="col-md-6">
+              <div  class="panel panel-success">
+                <div class="panel-heading">
+                  <h3 class="panel-title">Cihaz 1</h3>
+                </div>
+                <div  >
+                  <h4 style="color:purple" > Basınç: &nbsp {{pressure}} °hPa</h4> 
+                  <h4 style="color:purple"> Sıcaklık: &nbsp {{temp}} °C</h4> 
+                  <h4 style="color:purple"> Nem: &nbsp {{humidity}} %</h4> 
+                  <h4 style="color:purple"> Işık Miktarı: &nbsp {{light}}</h4> 
+                  <h4 style="color:purple"> Yakınlık Derecesi: &nbsp {{distance}} </h4> 
+                  <button data-toggle="modal" data-target="#myModal" type="button" class="btn btn-primary">Kamerayı aç</button>
+                </div>
+
+                <div id="myModal" class="modal fade" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Kamera</h4>
+                      </div>
+                      <div class="modal-body">
+                        <iframe src="http://raspberrypi.local:8080/stream_simple.html" width='550px' height='500px' />
+                      </div>
+                    
+
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+          </div>
+          
+
+          </div>
+        </div>
+
+
+
+    </body>
+</html>

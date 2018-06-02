@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Dashboard</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+    </head>
+
+    <style>
+
+        #content {
+          height: 100%;
+          width: 100%;
+          display: flex;
+        }
+
+
+
+        .panel.panel-success{
+          margin-left: 0px;
+          margin-top: 40px;
+          width:  500px;
+          height: 200px;
+          background-color: #66B266;
+        }
+
+        .panel.panel-danger{
+          margin-left: 0px;
+          margin-top: 40px;
+          width:  600px;
+          height: 200px;
+          background-color: #66B266;
+        }
+
+        .panel-body{
+
+            background-image:url(3.png);
+            background-position: 7px 7px;
+            background-repeat: no-repeat;
+            background-position: right;
+
+        
+        }
+
+     
+    </style>
+
+
+    <body ng-app="myApp" ng-controller="loginCtrl_">
+
+     
+
+        <div  class="wrapper">
+
+          
+
+            
+
+            <!-- Page Content Holder -->
+            <div id="content">
+
+               <div id ="left" class = "panel panel-success">
+                   <div class = "panel-heading">
+                      <h3 class = "panel-title">Online Cihaz Sayısı</h3>
+                   </div>
+                   
+                   <div class = "panel-body">
+                      <h3 > 1 Cihaz online durumda</h1>
+                   </div>
+
+              </div>
+
+             <div id ="right" class = "panel panel-danger">
+                   <div class = "panel-heading">
+                      <h3 class = "panel-title">Offline Cihaz Sayısı</h3>
+                   </div>
+                   
+                   <div class = "panel-body">
+                      <h3 > 0 Cihaz offline durumda</h1>
+                   </div>
+
+              </div>
+
+
+                
+            </div>
+        </div>
+
+
+      
+    </body>
+</html>

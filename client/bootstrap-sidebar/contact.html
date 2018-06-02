@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Contact</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+</head>
+
+<style type="text/css">
+    
+body{
+    background-color: #eaeaea;
+}
+.address-icon i{
+    font-size: 36px;
+    line-height: 32px;
+}
+.icons i{
+    color: #fff;
+    padding: 8px 0px;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    margin-right: 5px;
+}
+</style>
+
+<body ng-app="myApp" ng-controller="loginCtrl_">
+    <br><br>
+    <div class="container">
+      <div class="row">
+          <div class="col-lg-8 offset-lg-2 col-12">
+              <div class="row">
+                  <div class="col-lg-12 col-12 p-0 contact-us">
+                    <legend><h2><b>Contact Us</b></h2></legend><br>
+                  </div>
+              </div>
+              <div class="row bg-light pt-3 pb-3 mb-4">
+                  <div class="col-lg-12">
+                    <h3>ADDRESS :</h6>
+                  </div>
+                  <br>
+                  <br>
+                  <div class="col-lg-4 col-4">
+                      Gebze Teknik Universitesi,
+                        Bilgisayar Muhendisligi,
+                        Gebze, Kocaeli.                          
+                  </div>
+                  <div class="col-lg-4 col-4">
+                  <p class="m-0 text-danger"><i class="fa fa-phone-square" aria-hidden="true"></i>
+                      +90 5372795261
+                  </p>
+                  <p class="m-0 text-info"><i class="fa fa-envelope" aria-hidden="true"></i>
+                      feanor924@gmail.com
+                  </p>
+                  </div>
+                  <div class="col-lg-4 col-4 address-icon text-center text-danger">
+                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                  </div>
+              </div>
+              <div class="row bg-light pt-3 pb-3 mb-4">
+                  <div class="col-lg-6 col-12">
+                    <form ng-submit="user_contact()">
+                      <div class="form-row mb-3">
+                        <div class="col">
+                          <input ng-model="form_contact.name" type="text" class="form-control" placeholder="Name :" required>
+                        </div>
+                        <div class="col">
+                          <input ng-model="form_contact.company" type="text" class="form-control" placeholder="Company :" required>
+                        </div>
+                      </div>
+                      <div class="form-row mb-3">
+                        <div class="col">
+                          <input ng-model="form_contact.email" type="text" class="form-control" placeholder="Email :" required>
+                        </div>
+                        <div class="col">
+                          <input  ng-model="form_contact.mobile" type="text" class="form-control" placeholder="Mobile :" required>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <textarea ng-model="form_contact.message" class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message :" required></textarea>
+                      </div>
+                      <button type="submit" class="btn btn-danger mb-4">Send</button>
+                    </form>
+                  </div>
+                  <div class="col-lg-6 col-12">
+                      <div style="width: 100%"><iframe width="200%" height="300" src="https://maps.google.com/maps?width=100%&height=400&hl=en&q=gebze%20teknik+(Your%20Business%20Name)&ie=UTF8&t=&z=12&iwloc=B&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.mapsdirections.info/en/custom-google-maps/">Create a custom Google Map</a> by <a href="https://www.mapsdirections.info/en/">Measure area on map</a></iframe></div><br />
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</body>
+</html>

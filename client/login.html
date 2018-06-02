@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+   
+<head>
+	<meta charset = "utf-8">
+   	<title> Bitirme  </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+
+ 	 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		
+
+		<script src="controller.js"></script>
+
+       	<style type="text/css">
+       		
+			body{
+				background-color: #5D5B86;
+			}
+
+       		.sign_form {
+ 		   		display: inline-table;
+     	 		text-align: center;
+				margin-top:50px;
+				margin-left: 570px;
+
+			}
+
+			.header{
+				text-align: center;
+				margin-top: 150px;
+				margin-right: 40px;
+				color: white;
+				font-weight: bold;
+			}
+			.login{
+				color:white;
+				font-size: 20px;
+			}
+
+			#inputEmail{
+				background-image: url(user.png);
+				background-position: 7px 7px;
+				margin-right: 15px;
+    			background-repeat: no-repeat;
+			    background-position: right;
+
+			}
+
+			#inputPassword{
+				background-image:url(password.png);
+				background-position: 7px 7px;
+    			background-repeat: no-repeat;
+			    background-position: right;
+
+			}
+
+			.btn{
+				background-image:url(login.png);
+				background-position: 7px 7px;
+    			background-repeat: no-repeat;
+			    background-position: right;
+
+			}
+
+       	</style>
+
+</head>
+   <body ng-app="myApp" ng-controller="loginCtrl"> 
+
+ 
+		<h2 class="header">Mekan Bildirim Sistemi </h2>
+		
+			<form  class="sign_form">
+
+			 	<p class="login">Giriş Yapınız</p>
+		  		<input id="inputEmail"  class="form-control" ng-model="email" placeholder="Email address" required="" autofocus="" type="email">
+		  		<input id="inputPassword"  class="form-control" ng-model="password" placeholder="Password" required="" type="password">  				
+
+				<div class="checkbox mb-3"">
+					<label>
+						<input type="checkbox">
+						Beni hatırla
+					</label>
+				</div>
+
+				<button class="btn btn-lg btn btn-success btn-block" ng-click="submit()" type="submit">Giriş Yap</button>
+
+			</form> 
+   </body>
+</html>

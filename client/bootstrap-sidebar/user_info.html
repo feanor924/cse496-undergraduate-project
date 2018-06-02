@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    
+
+        <title>Dashboard</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+        <link rel="stylesheet" href="style.css">
+
+        <script src="controller_.js"></script>
+    </head>
+
+    <style>
+
+        /* CSS used here will be applied after bootstrap.css */
+        body {
+          background-color: #eaeaea;
+        }
+
+        img.avatar {
+          border: 1px solid #eee;
+        }
+
+        .only-bottom-margin {
+          margin-top: 0px;
+        }
+
+        .activity-mini {
+          padding-right: 15px;
+          float: left;
+        }
+
+
+        #can{
+          height: 300px;
+          width: 1600px;
+        }
+        #can1{
+            background-color: #F1F1F1;
+        }
+
+    </style>
+
+
+    <body ng-app="myApp" ng-controller="loginCtrl_">
+
+     
+
+    
+        <div  id = "can" class="container">
+          <div class="row">
+            <div class="col-md-9">
+              <div class="panel panel-default">
+                <div id="can1" class="panel-body">
+                  <div class="row">
+                    <legend><h2><b>&nbsp&nbspUser Profile</b></h2></legend><br>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-4 text-center">
+                      <img class="img-circle avatar avatar-original" style="-webkit-user-select:none; 
+                      display:block; margin:auto; height:150px; width: 150px;" src="1.png">
+                    </div>
+                    <div class="col-md-8">
+                      <div class="row">
+                        <div class="col-md-14">
+
+                            
+                          <h3 style="text-align:left;float:left;" class="text-info">First Name: </h3><br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{firstname}}</h4> 
+                          <h3 style="text-align:left;float:left;" class="text-info">Last Name: </h3> <br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{lastname}}</h4> 
+                          <h3 style="text-align:left;float:left;" class="text-info">Department / Office: </h3><br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{department}}</h4> 
+                          <h3 style="text-align:left;float:left;" class="text-info">Username: </h3><br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{username}}m</h4> 
+                          <h3 style="text-align:left;float:left;" class="text-info">Email: </h3><br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{email}}</h4> 
+                          <h3 style="text-align:left;float:left;" class="text-info">Contact No: </h3><br>
+                          <h4 style="text-align:middle;float:middle;"> &nbsp&nbsp {{contact}}</h4> 
+                          <br><br>
+                          <small class="text-info">Created: 06.06.2018</small><br>
+                        </div>
+                      </div>
+                    </div>
+                    
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       
+
+
+        <!-- jQuery CDN -->
+         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+         <!-- Bootstrap Js CDN -->
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+         <script type="text/javascript">
+
+            
+         </script>
+    </body>
+</html>
